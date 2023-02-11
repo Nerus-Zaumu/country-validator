@@ -1,0 +1,15 @@
+{
+  "name": "country-validator",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc",
+    "lint": "tsc"
+  },
+  "keywords": [],
+  "author": "Yimna Nerus",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  }
+}

@@ -28,6 +28,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: npm install -g pnpm
       - run: pnpm install
+      - name: Pulish package to npm
       - run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{COUNTRY_VALIDATOR_ENV.NPM_AUTH_TOKEN}}
+          NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}

@@ -1,9 +1,3 @@
-# what is this
-
-Get basic information about nations such as their name, dial code and country code
-Do all this without having to download some huge list of countries
-
-
 # Documentation for country-validator
 
 country-validator is a javascript library that helps in working with basic data about world countries such as names, country code, dial code and continent.

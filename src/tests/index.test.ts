@@ -17,6 +17,8 @@ import { Country } from "../utils/types";
 
  const africanCountries = countries.filter((country: Country) => country.continent === 'AFRICA')
  const limitedAfricanCountries = africanCountries.slice(0, 5)
+ console.log(limitedAfricanCountries.length);
+ 
 
 
  test('Cameroon should return a truthy value and Camersn should be falsy', () => {

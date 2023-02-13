@@ -16,7 +16,7 @@ import {
 import { Country } from "../utils/types";
 
  const africanCountries = countries.filter((country: Country) => country.continent === 'AFRICA')
- const limitedAfricanCountries = africanCountries.slice(4)
+ const limitedAfricanCountries = africanCountries.slice(0, 5)
 
 
  test('Cameroon should return a truthy value and Camersn should be falsy', () => {
@@ -72,12 +72,12 @@ import { Country } from "../utils/types";
 
  test('() and (5) should yield arrays of unequal lengths of all countries', () => {
     expect(getAllCountries()).toEqual(countries)
-    expect(getAllCountries(5)).toEqual(countries.slice(4))
+    expect(getAllCountries(5)).toEqual(countries.slice(0, 5))
  })
 
  test('Depending on the params passed, there should be a sorted list of countries received', () => {
     expect(sortCountries({data: africanCountries})).toEqual(africanCountries.sort(compareFunc))
-    expect(sortCountries({data: africanCountries, limit: 5})).toEqual(africanCountries.sort(compareFunc).slice(4))
-    expect(sortCountries({limit: 5})).toEqual(countries.sort(compareFunc).slice(4))
+    expect(sortCountries({data: africanCountries, limit: 5})).toEqual(africanCountries.sort(compareFunc).slice(0, 5))
+    expect(sortCountries({limit: 5})).toEqual(countries.sort(compareFunc).slice(0, 5))
     expect(sortCountries()).toEqual(countries.sort(compareFunc))
  })
